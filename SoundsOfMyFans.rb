@@ -3,9 +3,6 @@ took only 2 days, thank you visual studio code intellisense or whatever they cal
 used google to google how to use ruby and which are what
 Still learning
 Ruby is pretty simple after all...
-You need   'ruby 3.4.8' in my opinion
-Other ruby versions are not tested
-Check your ruby version with ruby -v
 =end
 
 
@@ -115,5 +112,13 @@ loop do
     
     else
         puts "Invalid input. Type 'help' for a list of commands."
+
+if satellite_data.values.any? { |stats| stats["health_percentage"] <= 0 }
+    puts "ALERT: A satellite has reached 0% health!"   
+    sleep(1)
+    puts "NEW EMAIL:"
+    sleep(1)
+    puts "Vivi: 'Hey, man, I know you are trying to but like.. one of the satellites has reached 0% health, I don't have money to buy another one so... Your FIRED!"
     end
+  end  
 end
