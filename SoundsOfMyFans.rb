@@ -1,3 +1,12 @@
+=begin
+took only 2 days, thank you visual studio code intellisense or whatever they call it, autocomplete
+used google to google how to use ruby and which are what
+Still learning
+Ruby is pretty simple after all...
+=end
+
+
+
 # Satellite data with health and signal metrics
 satellite_data = {
     "Alpha" => {"health_percentage" => 100, "signal_strength" => 100},
