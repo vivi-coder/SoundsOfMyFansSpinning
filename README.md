@@ -6,4 +6,6 @@ then try
 ruby SoundsOfMyFans.rb
 
 Im using ruby 3.4.8
+
+Versions tested on: Termux, Ruby 3.4.1
 Other ruby versions not tested
