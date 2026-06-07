@@ -3,6 +3,9 @@ took only 2 days, thank you visual studio code intellisense or whatever they cal
 used google to google how to use ruby and which are what
 Still learning
 Ruby is pretty simple after all...
+You need   'ruby 3.4.8' in my opinion
+Other ruby versions are not tested
+Check your ruby version with ruby -v
 =end
 
 
