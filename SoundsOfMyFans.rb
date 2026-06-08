@@ -20,8 +20,23 @@ satellite_data = {
 }
 
 # strings
-list_of_commands = ["help", "calibrate", "fix", "status", "quit"]
+list_of_commands = ["help", "calibrate", "fix", "status", "quit", "bank"]
 randomtime = [3, 5, 8]  # Store time values, not sleep results
+money = 0
+
+
+money = 0
+
+# Money generation thread every 1 second based on total signal strength, if under 358, no money is generated, if 358 or above, $10 is added to the total money every second
+Thread.new do
+  loop do
+    sleep(1)
+    total_signal = satellite_data.values.sum { |stats| stats["signal_strength"] }
+    if total_signal >= 358
+      money += 10
+    end
+  end
+end
 
 # Apply separate decay for health and signal_strength
 def apply_decay_every_3_seconds(satellite_data, randomtime)
@@ -106,9 +121,12 @@ loop do
             puts "Invalid satellite name."
         end
     
+    when "bank"
+        puts "Current money: $#{money}"
+
     when "quit"
         puts "SHUTTING DOWN...."
-        break
+        break   
     
     else
         puts "Invalid input. Type 'help' for a list of commands."
